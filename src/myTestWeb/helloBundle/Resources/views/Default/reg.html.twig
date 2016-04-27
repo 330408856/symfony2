@@ -1,0 +1,39 @@
+{% extends 'myTestWebhelloBundle::layout.html.twig' %}
+
+{% block maincontent %}
+	<div class="panel panel-default">
+	  <div class="panel-body">
+	    <form class="form-horizontal" role="form" action="do_reg" method="post">
+		   <div class="form-group">
+		      <label for="firstname" class="col-sm-2 control-label">用户名</label>
+		      <div class="col-sm-5">
+		         <input type="text" class="form-control" id="firstname" name="username" 
+		            placeholder="请输入用户名">
+		      </div>
+		   </div>
+		   <div class="form-group">
+		      <label for="lastname" class="col-sm-2 control-label">密码</label>
+		      <div class="col-sm-5">
+		         <input type="text" class="form-control" id="lastname" name="pwd"
+		            placeholder="密码">
+		      </div>
+		   </div>
+		   <div class="form-group">
+		      <label for="lastname" class="col-sm-2 control-label">再次输入密码</label>
+		      <div class="col-sm-5">
+		         <input type="text" class="form-control" id="lastname" name="pwd2"
+		            placeholder="再次输入密码">
+		      </div>
+		   </div>
+		   <div class="form-group">
+		      <div class="col-sm-offset-2 col-sm-10">
+		         <button type="submit" class="btn btn-default">确定</button>
+		      </div>
+		   </div>
+		</form>
+	  </div>
+	</div>
+	{% block footer %}
+	{{ parent() }}
+	{% endblock %}
+{% endblock %}

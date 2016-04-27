@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link href="{{ asset('bundles/public/css/bootstrap.css')}}" type="text/css" rel="stylesheet" media="all">
+<link href="{{ asset('bundles/public/css/style.css')}}" type="text/css" rel="stylesheet" media="all">
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Custom Theme files -->
+<!-- js -->
+<script src="{{ asset('bundles/public/js/jquery-1.11.1.min.js')}}"></script>
+<script src="{{ asset('bundles/public/js/modernizr.custom.js')}}"></script>
+<!-- //js -->	
+<!-- start-smoth-scrolling-->
+<script type="text/javascript" src="{{ asset('bundles/public/js/move-top.js')}}"></script>
+<script type="text/javascript" src="{{ asset('bundles/public/js/easing.js')}}"></script>	
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!--//end-smoth-scrolling-->
+<!--animate-->
+<link href="{{ asset('bundles/public/css/animate.css')}}" rel="stylesheet" type="text/css" media="all">
+<script src="{{ asset('bundles/public/js/wow.min.js')}}"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+</head>
+<body>
+{% block head %}
+	<!--banner-->
+	<div class="banner">		
+		<!--header-->
+		<div class="banner-text">
+			<div class="logo">	
+				<a href="index.html"><img src="{{ asset('bundles/public/images/logo.png')}}" alt=""/></a>
+			</div> 
+			<div class="top-nav">	
+				<ul class="nav1 cl-effect-1">
+					<li><a href="/hai">Home</a></li>
+					<li><a href="reg" >注册</a></li>
+					<li><a href="list">用户列表</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- banner Slider starts Here -->
+		<script src="{{ asset('bundles/public/js/responsiveslides.min.js')}}"></script>
+		<script>
+			// You can also use "$(window).load(function() {"
+				$(function () {
+				// Slideshow 3
+					$("#slider3").responsiveSlides({
+					auto: true,
+					pager:false,
+					nav:true,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+					$('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});	
+			});
+		</script>
+		<!--//End-slider-script -->
+		<div  id="top" class="callbacks_container">
+			<ul class="rslides" id="slider3">
+				<li>					
+					<div class="banner2">						
+					</div>
+				</li>
+				<li>					
+					<div class="banner1">						
+					</div>
+				</li>								
+			</ul>
+		</div>
+	</div>
+	<!--//banner-->
+{% endblock %}
+
+{% block maincontent%}
+	<!--about-->
+	<div class="about" id="about">
+		<div class="container">
+			<div class="title">
+				<h3>About Us</h3>
+				<p>A wonderful designs has takenpossession but also the leap into electronic pesetting industry  It was popularised in the 1960s with the release </p>
+			</div>
+			<div class="about-grids">				
+				<div class="col-md-6 about-info  wow fadeInLeft animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
+					<h4>Eco friendly food is good for health </h4>
+					<p>Takenpossession of lorem Ipsum is simply dummy text of the printing and typesetting industry In sit amet sapien eros Integer  in tincidunt labore et dolore magna aliqua  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+					<ul>
+						<li><a href="#">Donec ut quam lscele volutri.</a></li>
+						<li><a href="#">Etiam volutpatbh quam bortis</a></li>
+						<li><a href="#">Varius fusce vit aeblandit.</a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 about-info  wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
+					<img src="{{ asset('bundles/public/images/img1.jpg')}}" alt=""/>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//about-->
+ 	{% block footer %}
+	<!--footer-->
+	<div class="footer">
+		<div class="container">			
+				<p class="wow bounceIn animated" data-wow-delay=".5s" style="visibility: visible; -webkit-animation-delay: .5s;">Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+			<div class="clearfix"> </div>
+		</div>	
+	</div>
+	<!--//footer-->
+	{% endblock %}
+{% endblock %}
+	<!--smooth-scrolling-of-move-up-->
+	<script type="text/javascript">
+			$(document).ready(function() {
+				/*
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+				};
+				*/
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!--//smooth-scrolling-of-move-up-->
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ asset('bundles/public/js/bootstrap.js')}}"> </script>
+</body>
+</html>

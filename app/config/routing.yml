@@ -1,0 +1,8 @@
+my_test_webhello:
+    resource: "@myTestWebhelloBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

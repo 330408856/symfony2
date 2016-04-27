@@ -1,0 +1,39 @@
+{% extends 'myTestWebhelloBundle::layout.html.twig' %}
+
+{% block maincontent %}
+	<div style="width:1200px;margin:auto;border:1px solid #969696; ">
+		<div class="panel panel-default">
+		  <div class="bs-example" data-example-id="panel-without-body-with-table">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Panel heading</div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>用户名</th>
+            <th>密码</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% if users %}
+        {% for user in users %}
+          <tr>
+            <th scope="row">{{ user.id }}</th>
+            <td>{{ user.username }}</td>
+            <td>{{ user.password }}</td>
+          </tr>
+        {% endfor %}
+        {% endif %} 
+        </tbody>
+      </table>
+    </div>
+  </div>
+		
+	</div>
+	{% block footer %}
+	{{ parent() }}
+	{% endblock %}
+{% endblock %}
